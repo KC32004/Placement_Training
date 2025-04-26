@@ -1,0 +1,7 @@
+for index in range(5):
+    for pos in range(5): 
+        if (index%2==0 and pos==4)or(index%2==1 and j==0):
+            print(index+2,end=" ")
+        else:
+            print(index+1,end="")
+    print()
