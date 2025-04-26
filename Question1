@@ -1,1 +1,27 @@
+def check_disarium(num):
+    digits=str(num)
+    total=0
+    for i in range(len(digits)):
+        total+=int(digits[i]) ** (i + 1)
+    return total==num
+# Find first n 
+def first_n_disarium(n):
+    count = 0
+    num = 0
+    print(f"First {n} Disarium numbers:")
+    while count < n:
+        if check_disarium(num):
+            print(num)
+            count += 1
+        num += 1
+
+# Find between two numbers
+def disarium_in_range(start, end):
+    print(f"\nDisarium numbers between {start} and {end}:")
+    for num in range(start, end + 1):
+        if check_disarium(num):
+            print(num)
+
+first_n_disarium(10)
+disarium_in_range(10, 135)
 
